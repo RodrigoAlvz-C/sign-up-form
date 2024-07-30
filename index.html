@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign-up Form</title>
+  </head>
+  <body>
+    <div id="image">
+      <div id="title">
+        <img src="./images/odin-icon.png" alt="odions icon" id="odin-icon" />
+        Odin
+      </div>
+      <div id="credits">
+        Photo by
+        <a href="https://unsplash.com/es/@haliewestphoto" target="_blank"
+          >Halie West</a
+        >
+        on <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+      </div>
+    </div>
+    <div id="content">
+      <p>
+        This is not a real online service! You know you need something like this
+        in your life to help you realize your deepest dreams. Sign up now to get
+        started.
+      </p>
+      <br />
+      <p>You know you want to</p>
+      <br />
+
+      <form onsubmit="return false;">
+        <div id="form">
+          <p>Let's do this!</p>
+          <fieldset id="inputs">
+            <div>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                minlength="2"
+                maxlength="50"
+                pattern="[A-Za-z\s]+"
+                title="The name should contain only letters and spaces."
+                required
+              />
+            </div>
+            <div>
+              <label for="lastname">Last Name</label>
+              <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                minlength="2"
+                maxlength="50"
+                pattern="[A-Za-z\s]+"
+                title="The name should contain only letters and spaces."
+                required
+              />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                pattern="^[^@]+@[^@]+\.[^@]+$"
+                title="The email must be in a valid format, for example: name@gmail.com"
+                required
+              />
+            </div>
+            <div>
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="\+?[0-9\s\-]{7,15}"
+                title="The phone number must be between 7 and 15 digits long, with optional spaces, dashes, or plus sign"
+                required
+              />
+            </div>
+            <div>
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="8"
+                maxlength="20"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+                title="The password must be between 8 and 20 characters long, and must include at least one number, one lowercase letter, and one uppercase letter."
+                required
+              />
+            </div>
+            <div>
+              <label for="confirm-password">Confirm Password</label>
+              <input
+                type="password"
+                id="confirm-password"
+                name="confirm-password"
+                required
+                minlength="8"
+                maxlength="20"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+                title="The password must be between 8 and 20 characters long, and must include at least one number, one lowercase letter, and one uppercase letter."
+                required
+              />
+            </div>
+          </fieldset>
+        </div>
+        <div id="create-account">
+          <button type="submit">Create Account</button>
+          <div>
+            <span>Already have an account?</span>
+            <span id="log">Log in</span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
